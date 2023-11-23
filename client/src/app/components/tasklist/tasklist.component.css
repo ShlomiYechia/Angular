@@ -1,0 +1,64 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.task-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px; /* Adjusted gap to 20px for closer spacing */
+  justify-content: center;
+}
+
+.task-cube {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background-color: #3498db;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.task-cube:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.task-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.task-details {
+  display: none;
+  font-size: 14px;
+}
+
+.task-cube:hover .task-details {
+  display: block;
+}
+
+.high-priority {
+  background-color: red;
+}
+
+.medium-priority {
+  background-color: orange;
+}
+
+.low-priority {
+  background-color: green;
+}
